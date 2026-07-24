@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import styles from "./SiteFooter.module.css";
@@ -19,7 +20,10 @@ export function SiteFooter() {
       </div>
       <div className={styles.mainGrid}>
         <section className={styles.brandArea} aria-label="센터 정보">
-          <Link className={styles.brand} href="/"><span className={styles.mark} aria-hidden="true">✦</span><span><b>한국진로</b><small>커리어센터</small></span></Link>
+          <Link className={styles.brand} href="/" aria-label={`${siteConfig.name} 홈`}>
+            <Image className={styles.logo} src="/images/logo-kc.png" alt="" width={740} height={873} />
+            <span><b>한국진로</b><small>커리어센터</small></span>
+          </Link>
           <p>AI 시대의 진로 탐색부터 취업 연결까지,<br />사람의 가능성을 중심에 두고 함께합니다.</p>
           <div className={styles.pendingInfo}><span>CONTACT</span><p>주소·대표번호·이메일 정보는 준비 중입니다.</p></div>
         </section>

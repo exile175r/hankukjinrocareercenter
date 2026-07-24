@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -23,7 +24,10 @@ export function SiteHeader() {
 
   return <header className={styles.header} onKeyDown={(event)=>{if(event.key==="Escape")setExpanded(null)}}>
     <div className={styles.inner}>
-      <Link className={styles.brand} href="/" aria-label={`${siteConfig.name} 홈`} onClick={closeAll}><span className={styles.mark} aria-hidden="true"><i/><i/><i/></span><span><b>한국진로</b><small>커리어센터</small></span></Link>
+      <Link className={styles.brand} href="/" aria-label={`${siteConfig.name} 홈`} onClick={closeAll}>
+        <Image className={styles.logo} src="/images/logo-kc.png" alt="" width={740} height={873} priority />
+        <span><b>한국진로</b><small>커리어센터</small></span>
+      </Link>
       <button className={styles.menuButton} type="button" aria-label="메뉴 열기" aria-expanded={mobileOpen} onClick={()=>setMobileOpen(!mobileOpen)}><span/><span/><span/></button>
       <nav className={`${styles.nav} ${mobileOpen?styles.open:""}`} aria-label="주요 메뉴">
         <ul className={styles.navList}>

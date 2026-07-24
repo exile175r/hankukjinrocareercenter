@@ -10,7 +10,7 @@ export default function Home(){return <main>
   <section className={styles.hero}>
     <Image src="/images/career-ai-hero.png" alt="상담 전문가와 구직자가 함께 진로 방향을 살펴보는 모습" fill priority sizes="100vw" className={styles.heroImage}/>
     <div className={styles.heroShade}/><div className={styles.heroGrid}/>
-    <div className={styles.heroContent}><span className={styles.eyebrow}>HUMAN CAREER · INTELLIGENT FUTURE</span><h1>나의 가능성을 발견하고,<br/><em>미래의 일</em>과 연결합니다.</h1><p>AI 진단 도구와 사람 중심의 전문 상담을 결합해<br/>나에게 맞는 진로 방향을 함께 찾아갑니다.</p><div className={styles.actions}><Link className="button primary" href="/programs">프로그램 살펴보기 <span>→</span></Link><Link className="button glass" href="/apply">상담·교육 신청</Link></div></div>
+    <div className={styles.heroContent}><span className={styles.eyebrow}>기술과 사람을 잇는 곳이란</span><h1>나의 가능성을 발견하고,<br/><em>미래의 일</em>과 연결합니다.</h1><p>AI 진단 도구와 사람 중심의 전문 상담을 결합해<br/>나에게 맞는 진로 방향을 함께 찾아갑니다.</p><div className={styles.actions}><Link className="button primary" href="/programs">프로그램 살펴보기 <span>→</span></Link><Link className="button glass" href="/apply">상담·교육 신청</Link></div></div>
     <div className={styles.heroMeta}><span>AI CAREER GUIDANCE</span><b>01</b><i/></div>
   </section>
 
